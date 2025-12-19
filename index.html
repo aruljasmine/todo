@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+</head>
+<style>
+    body{
+      background-image: url(todo.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+        font-family: Arial, sans-serif;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ 
+
+    }
+    h2{
+        text-align: center;
+        color:rgb(1, 1, 77);
+    }
+#cont{
+    background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px white;
+}
+.cont2{
+  background-color:rgb(198, 193, 193);
+  border-radius: 5px;
+  text-align: center;
+ 
+}
+input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  outline: 0;border: 0;
+  background-color: rgb(196, 194, 194);
+  width: 200px;
+
+}
+
+button {
+ 
+  cursor: pointer;
+  background: navy;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left:10px;
+  
+}
+li {
+  list-style: none;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+/* 📱 Mobile devices (phones) */
+@media (max-width: 480px) {
+  .todo-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .input-box {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .input-box input,
+  .input-box button {
+    width: 100%;
+  }
+
+  #taskList li {
+    font-size: 14px;
+  }
+ 
+}
+
+</style>
+<body>
+<div id="cont"><h2>To-Do List</h2>
+ 
+        <input type="text" id="taskinput" placeholder="Add a task">
+        <button id="btn">Add task</button>
+         <div class="cont2">
+    <ul id="listoftask"></ul>
+  </div>
+    </div>
+    <ul id="listoftask"></ul>
+</body>
+<script src="script.js"></script>
+</html>
